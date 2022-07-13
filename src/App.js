@@ -2,14 +2,13 @@ import React,{useState} from 'react'
 import Search from './search.svg'
 import Card from './Components/Card'
 import ("./App.css")
-// const API_URL= "http://www.omdbapi.com/?apikey=22b16ba0";
+const API_URL= "http://www.omdbapi.com/?apikey=22b16ba0";
 
 const App = () => {
   const [movie, setMovie] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   const fetchMovies=async(title)=>{
-    // const res= await fetch(`${API_URL}&s=${title}`)
-    const res= await fetch(`${process.env.REACT_APP_API_URL}&s=${title}`)
+    const res= await fetch(`${API_URL}&s=${title}`)
     const data = await res.json()
     setMovie(data.Search)
   }
