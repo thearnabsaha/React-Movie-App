@@ -11,7 +11,6 @@ const App = () => {
     const res= await fetch(`${API_URL}&s=${title}`)
     const data = await res.json()
     setMovie(data.Search)
-    console.log(movie);
   }
   const handleEnter=(e)=>{
     if(e.key==="Enter"){
