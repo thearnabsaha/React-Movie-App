@@ -16,6 +16,7 @@ const App = () => {
   const handleEnter=(e)=>{
     if(e.key==="Enter"){
       fetchMovies(searchTerm)
+      searchTerm=""
     }
   }
   return (
